@@ -55,8 +55,10 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
+        win.requestAnimationFrame(main);
+
         //check and see if the player has won the game. If so stop the animation and post a message about winning.
-        if(player.y<0){
+        /*if(player.y<0){
             
             ctx.font = "72px Arial";
             ctx.fillText("You Win!",100,250);
@@ -67,7 +69,7 @@ var Engine = (function(global) {
         } else{
             win.requestAnimationFrame(main); 
         }
-    
+        */
     }
 
     /* This function does some initial setup that should only occur once,
@@ -193,6 +195,6 @@ var Engine = (function(global) {
      * object when run in a browser) so that developers can use it more easily
      * from within their app.js files.
      */
-    global.winner = winner;
+    //global.winner = winner;
     global.ctx = ctx;
 })(this);
